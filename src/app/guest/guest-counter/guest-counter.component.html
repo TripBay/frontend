@@ -1,0 +1,71 @@
+<mat-form-field class="example-full-width">
+  <mat-label>Guests</mat-label>
+  <mat-select>
+    <mat-option (click)="wontClose" disabled>
+      <div class="container">
+        <div class="row">
+          <div style="float: left; width: 50%;">
+            <div class="dropdown-item">
+                <strong>Adults</strong>
+            </div>
+          </div>
+          <div style="float: right; width: 45.6%;">
+              <div style="float: right;">
+                <div *ngIf="guestCounter == 0; then thenBlock else elseBlock"></div>
+                <ng-template #thenBlock><button (click)="minusGuest()" class="btn btn-light btn-circle" disabled>-</button></ng-template>
+                <ng-template #elseBlock><button (click)="minusGuest()" class="btn btn-light btn-circle">-</button></ng-template>
+                <strong>{{ guestCounter }}</strong>
+                <button (click)="addGuest()" class="btn btn-light btn-circle">+</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </mat-option>
+    <mat-option (click)="wontClose" disabled>
+      <div class="container">
+        <div class="row">
+          <div style="float: left; width: 50%;">
+            <div class="dropdown-item">
+                <strong>Children</strong>
+            </div>
+          </div>
+          <div style="float: right; width: 45.6%;">
+              <div style="float: right;">
+                <div *ngIf="guestCounter == 0; then thenBlock else elseBlock"></div>
+                <ng-template #thenBlock><button (click)="minusGuest()" class="btn btn-light btn-circle" disabled>-</button></ng-template>
+                <ng-template #elseBlock><button (click)="minusGuest()" class="btn btn-light btn-circle">-</button></ng-template>
+                <strong>{{ guestCounter }}</strong>
+                <button (click)="addGuest()" class="btn btn-light btn-circle">+</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </mat-option>
+    <mat-option (click)="wontClose" disabled>
+      <div class="container">
+        <div class="row">
+          <div style="float: left; width: 50%;">
+            <div class="dropdown-item">
+                <strong>Infants</strong>
+            </div>
+          </div>
+          <div style="float: right; width: 45.6%;">
+              <div style="float: right;">
+                <div *ngIf="guestCounter == 0; then thenBlock else elseBlock"></div>
+                <ng-template #thenBlock><button (click)="minusGuest()" class="btn btn-light btn-circle" disabled>-</button></ng-template>
+                <ng-template #elseBlock><button (click)="minusGuest()" class="btn btn-light btn-circle">-</button></ng-template>
+                <strong>{{ guestCounter }}</strong>
+                <button (click)="addGuest()" class="btn btn-light btn-circle">+</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </mat-option>
+    <div style="float: left; padding-left: 23px">
+      <a href="#">Clear</a>
+    </div>
+  <div style="float: right; padding-right: 26px">
+      <a href="#">Save</a>
+  </div>
+  </mat-select>
+</mat-form-field>

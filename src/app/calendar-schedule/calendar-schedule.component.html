@@ -1,0 +1,25 @@
+
+<div class="row" style="size: 0px">
+  <b> Availability</b>
+  <div class="col s6">
+    <input style="size: 0px" type="hidden" ngxDaterangepickerMd
+    [(ngModel)]="selected" class="form-control" placeholder="Choose date"
+    [showDropdowns]="true"
+           [lockStartDate]="false"
+           [customRangeDirection]="false"
+    (ngModelChange)="ngModelChange($event)" (change)="change($event)" showCancel="true"
+    />
+  </div>
+  <div class="col s6 right-align">
+    <br/>
+    <button style="visibility: hidden" type="hidden" *ngIf="selected && selected.startDate" class="ngx-daterangepicker-action waves-effect waves-light btn red" (click)="clear($event)"></button>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12">
+      <ngx-daterangepicker-material (choosedDate)="choosedDate($event)" [locale]="{applyLabel: 'Done', firstDay: 1}"></ngx-daterangepicker-material>
+      <br>
+      Choosed date: {{inlineDate | json}}
+  </div>
+</div>
+

@@ -1,0 +1,47 @@
+
+.item img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.selected img {
+	opacity:0.5;
+}
+
+.carousel-caption {
+    position: relative;
+    left: auto;
+    right: auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background: none;
+  border: none;
+}
+
+/* .carousel-control-prev{
+  margin-left: -100px;
+}
+
+.carousel-control-next {
+  margin-right: -100px;
+} */
+
+.carousel-control {
+  width: 0%;
+}
+
+.fa-chevron-circle-left, .fa-chevron-circle-right {
+  color: red;
+  font-size: 40px;
+}
+/*
+img.card-img-top {
+  border-radius: 50%;
+  height : 150px !important;
+  width : 150px !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+} */

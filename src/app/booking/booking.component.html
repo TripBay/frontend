@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-4">
+      <app-booking-search></app-booking-search>
+    </div>
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-6">
+           <app-datepicker [name]="checkInNameDate" [minDate]="bookingMinDate"></app-datepicker>
+        </div>
+        <div class="col-md-6">
+           <app-datepicker [name]="checkOutNameDate" [minDate]="bookingMinDate"></app-datepicker>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+        <div class="row">
+            <div class="col-md-9">
+                <guest-counter></guest-counter>
+            </div>
+            <div class="col-md-3">
+                <a class="btn btn-primary" [routerLink]="['/hotel-page']" >Search</a>
+            </div>
+          </div>
+    </div>
+</div>

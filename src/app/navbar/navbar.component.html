@@ -1,0 +1,15 @@
+<div *ngIf="router.url === '/' || router.url === '/#'; then hide else show"></div>
+<ng-template #hide></ng-template>
+<ng-template #show>
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand">
+          <a [routerLink]="['/']" routerLinkActive="router-link-active">TripBay PH</a>
+        </span>
+        <div class="full-width">
+            <app-booking-search ></app-booking-search>
+        </div>
+
+      </nav>
+</ng-template>
+
+
