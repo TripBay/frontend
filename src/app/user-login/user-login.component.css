@@ -1,0 +1,18 @@
+.box {
+  width: 450px;
+  height: 600px;
+  -webkit-box-shadow: -4px 6px 5px 0px rgba(148,148,148,1);
+  -moz-box-shadow: -4px 6px 5px 0px rgba(148,148,148,1);
+  box-shadow: -4px 6px 5px 0px rgba(148,148,148,1);
+  display: inline-block;
+  /* border: 5px #525252; */
+  border: 1px solid gray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  text-align: center;
+}

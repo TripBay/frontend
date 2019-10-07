@@ -406,7 +406,7 @@ li > a:only-child:after {
 /*-- //header --*/
 
 .main-content {
-    background: url(../images/banner1.jpg) center no-repeat;
+    background: url(../images/banner1.jpg) center fixed no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

@@ -34,6 +34,9 @@ import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { ReviewsComponent } from './hotelpage/reviews/reviews.component';
 import { OtherHotelsComponent } from './hotelpage/other-hotels/other-hotels.component';
 import { HotelLocationComponent } from './hotelpage/hotel-location/hotel-location.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { LogInComponent } from './user-login/log-in/log-in.component';
+import { SignUpComponent } from './user-login/sign-up/sign-up.component';
 
 // const fbLoginOptions: LoginOpt = {
 //   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
@@ -86,7 +89,10 @@ import { HotelLocationComponent } from './hotelpage/hotel-location/hotel-locatio
      CalendarScheduleComponent,
      ReviewsComponent,
      OtherHotelsComponent,
-     HotelLocationComponent
+     HotelLocationComponent,
+     UserLoginComponent,
+     LogInComponent,
+     SignUpComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { HotelpageComponent } from './hotelpage/hotelpage.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: 'about-us' , component: AboutUsComponent},
   {path: 'hotel-page' , component: HotelpageComponent},
   {path: 'search' , component: SearchResultsComponent},
+  {path: 'user-login', component: UserLoginComponent}
 
 ];
 

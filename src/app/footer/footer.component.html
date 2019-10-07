@@ -1,3 +1,6 @@
+<div *ngIf="router.url === '/user-login'; then hide else show"></div>
+<ng-template #hide></ng-template>
+<ng-template #show>
 <!-- footer -->
 <footer class="footer-content">
   <div class="layer footer">
@@ -88,3 +91,4 @@
   </div>
 </footer>
 <!-- //footer -->
+</ng-template>

@@ -1,0 +1,73 @@
+.bton {
+  width: 400px;
+}
+
+.fb-btn {
+  background-color: #3b5998;
+  border: 1px #3b5998;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+a.fb-btn {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  cursor: pointer;
+  background-color: solid white !important;
+}
+
+a:active {
+  border: 1px solid grey;
+}
+
+
+a.google-btn {
+  text-decoration: none;
+  color: black;
+}
+
+.google-btn {
+  background-color:  white;
+  border: 1px solid grey;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.login {
+  display: inline-block;
+  text-align: center;
+}
+.containers {
+  margin: 20px;
+}
+
+.row {
+  padding-top: 7px;
+}
+
+p.or {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+p span {
+   background:#fff;
+   padding:0 10px;
+}
+
+button{
+   width: 350px;
+   height: 54px;
+ }
