@@ -1,3 +1,5 @@
+import { SignUpComponent } from './user-login/sign-up/sign-up.component';
+import { LogInComponent } from './user-login/log-in/log-in.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -12,7 +14,12 @@ const routes: Routes = [
   {path: 'about-us' , component: AboutUsComponent},
   {path: 'hotel-page' , component: HotelpageComponent},
   {path: 'search' , component: SearchResultsComponent},
-  {path: 'user-login', component: UserLoginComponent}
+  {path: 'sign', component: UserLoginComponent,
+        children: [
+          {path: 'in', component: LogInComponent},
+          {path: 'up', component: SignUpComponent}
+        ]
+  }
 
 ];
 
