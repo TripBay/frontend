@@ -1,4 +1,4 @@
-<div *ngIf="router.url === '/sign/up' || '/sign/up'; then hide else show"></div>
+<div *ngIf="router.url === '/sign/up' || router.url === '/sign/up' || router.url === '/sign/in'; then hide else show"></div>
 <ng-template #hide></ng-template>
 <ng-template #show>
 <!-- footer -->

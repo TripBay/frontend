@@ -7,27 +7,16 @@
                 <!-- nav -->
                 <nav class="py-4 d-lg-flex">
                     <div id="logo">
-                        <h1> <a href="index.html"><span class="fa fa-hotel" aria-hidden="true"></span>TB</a></h1>
+                        <h1> <a [routerLink]="['/']"><span class="fa fa-hotel" aria-hidden="true"></span>TB</a></h1>
                     </div>
                     <label for="drop" class="toggle">Menu</label>
                     <input type="checkbox" id="drop" />
                     <ul class="menu mt-2 ml-auto">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="#about" class="scroll">About</a></li>
-                        <li><a href="#menu" class="scroll">Menu</a></li>
-                        <li>
-                            <!-- First Tier Drop Down -->
-                            <label for="drop-2" class="toggle">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
-                            <a href="#">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                            <input type="checkbox" id="drop-2" />
-                            <ul class="inner-ul">
-                                <li><a class="scroll" href="#gallery">Gallery</a></li>
-                                <li><a href="#services" class="scroll">Services</a></li>
-                                <li><a href="#menu" class="scroll">Menu</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#testimonials" class="scroll">Reviews</a></li>
-                        <li><a href="#contact" class="scroll">Contact</a></li>
+                        <li class="active"><a [routerLink]="['/']">Home</a></li>
+                        <li><a [routerLink]="['/about-us']" class="scroll">About</a></li>
+                        <li><a [routerLink]="['/']">Download App</a></li>
+                        <li><a [routerLink]="['/sign/up']" class="scroll">Sign Up</a></li>
+                        <li><a [routerLink]="['/sign/in']" class="scroll">Sign In</a></li>
                     </ul>
                 </nav>
                 <!-- //nav -->
