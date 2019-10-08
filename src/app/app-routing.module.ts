@@ -16,6 +16,7 @@ const routes: Routes = [
   {path: 'search' , component: SearchResultsComponent},
   {path: 'sign', component: UserLoginComponent,
         children: [
+          {path: '', pathMatch: 'full', redirectTo: 'in' },
           {path: 'in', component: LogInComponent},
           {path: 'up', component: SignUpComponent}
         ]
