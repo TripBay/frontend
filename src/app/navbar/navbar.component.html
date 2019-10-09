@@ -1,5 +1,4 @@
-<div *ngIf="router.url === '/' || router.url === '/#' || router.url === '/login'; then hide else show"></div>
-<ng-template #hide></ng-template>
+<div *ngIf="home() ; else show"></div>
 <ng-template #show>
     <nav class="navbar navbar-light bg-light">
         <span class="navbar-brand">
@@ -8,7 +7,6 @@
         <div class="full-width">
             <app-booking-search ></app-booking-search>
         </div>
-
       </nav>
 </ng-template>
 

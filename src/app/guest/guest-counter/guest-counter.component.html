@@ -11,11 +11,7 @@
           </div>
           <div style="float: right; width: 45.6%;">
               <div style="float: right;">
-                <div *ngIf="guestCounter == 0; then thenBlock else elseBlock"></div>
-                <ng-template #thenBlock><button (click)="minusGuest()" class="btn btn-light btn-circle" disabled>-</button></ng-template>
-                <ng-template #elseBlock><button (click)="minusGuest()" class="btn btn-light btn-circle">-</button></ng-template>
-                <strong>{{ guestCounter }}</strong>
-                <button (click)="addGuest()" class="btn btn-light btn-circle">+</button>
+                  <guest-add-minus></guest-add-minus>
               </div>
           </div>
         </div>
@@ -31,11 +27,7 @@
           </div>
           <div style="float: right; width: 45.6%;">
               <div style="float: right;">
-                <div *ngIf="guestCounter == 0; then thenBlock else elseBlock"></div>
-                <ng-template #thenBlock><button (click)="minusGuest()" class="btn btn-light btn-circle" disabled>-</button></ng-template>
-                <ng-template #elseBlock><button (click)="minusGuest()" class="btn btn-light btn-circle">-</button></ng-template>
-                <strong>{{ guestCounter }}</strong>
-                <button (click)="addGuest()" class="btn btn-light btn-circle">+</button>
+                <guest-add-minus></guest-add-minus>
               </div>
           </div>
         </div>
@@ -51,11 +43,7 @@
           </div>
           <div style="float: right; width: 45.6%;">
               <div style="float: right;">
-                <div *ngIf="guestCounter == 0; then thenBlock else elseBlock"></div>
-                <ng-template #thenBlock><button (click)="minusGuest()" class="btn btn-light btn-circle" disabled>-</button></ng-template>
-                <ng-template #elseBlock><button (click)="minusGuest()" class="btn btn-light btn-circle">-</button></ng-template>
-                <strong>{{ guestCounter }}</strong>
-                <button (click)="addGuest()" class="btn btn-light btn-circle">+</button>
+                <guest-add-minus></guest-add-minus>
               </div>
           </div>
         </div>

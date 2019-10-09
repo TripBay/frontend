@@ -9,19 +9,9 @@ import { Guest } from '../guest';
 })
 export class GuestCounterComponent implements OnInit {
 
-  guestCounter: number = 0;
-
   constructor() { }
 
   ngOnInit() {
-  }
-
-  addGuest() {
-    return this.guestCounter += 1;
-  }
-
-  minusGuest() {
-    return this.guestCounter -= 1;
   }
 
   wontClose(){

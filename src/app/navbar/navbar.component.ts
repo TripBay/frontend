@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
 
 @Component({
   selector: 'navbar',
@@ -8,9 +8,15 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(public router: Router) { }
 
-  ngOnInit() {
+  constructor(private router: Router) { }
+
+  ngOnInit() {}
+
+  home() {
+    if(this.router.url === '/' || this.router.url === '/#home' || this.router.url === '/#' || this.router.url === '/#about'){
+      return true;
+    }
   }
 
 }

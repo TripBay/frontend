@@ -37,6 +37,7 @@ import { HotelLocationComponent } from './hotelpage/hotel-location/hotel-locatio
 import { UserLoginComponent } from './user-login/user-login.component';
 import { LogInComponent } from './user-login/log-in/log-in.component';
 import { SignUpComponent } from './user-login/sign-up/sign-up.component';
+import { GuestAddMinusComponent } from './guest/guest-add-minus/guest-add-minus.component';
 
 // const fbLoginOptions: LoginOpt = {
 //   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
@@ -92,7 +93,8 @@ import { SignUpComponent } from './user-login/sign-up/sign-up.component';
      HotelLocationComponent,
      UserLoginComponent,
      LogInComponent,
-     SignUpComponent
+     SignUpComponent,
+     GuestAddMinusComponent
   ],
   imports: [
     BrowserModule,
