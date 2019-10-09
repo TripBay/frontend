@@ -107,7 +107,7 @@ nav {
 }
 
 #logo a span {
-    color: #ffc80a;
+    color: #fa741b;
 }
 
 
@@ -164,7 +164,7 @@ nav ul li ul li:hover {
 /* Background color change on Hover */
 
 .menu li.active a {
-    color: #ffc80a;
+    color: #fa741b;
 }
 
 /* Hide Dropdowns by Default
@@ -202,7 +202,7 @@ nav ul.menu li ul li a {
 }
 
 nav ul.menu li ul li a:hover {
-    color: #ffc107;
+    color: #fa741b;
 }
 
 /* Second, Third and more Tiers
@@ -516,7 +516,7 @@ a.read-more {
 
 .ab-info h4 {
     font-size: 1em;
-    color: #ffc80a;
+    color: #fa741b;
     margin: 2em 0 0em 0;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -738,7 +738,7 @@ span.title {
 }
 
 .tab-main input:checked + label {
-    color: #ffc80a;
+    color: #fa741b;
     border: none;
     border-top: none;
     border-bottom: 1px solid #fff;
@@ -789,7 +789,7 @@ p.price {
 /*-- /order-sec --*/
 
 .order-sec {
-    background: #ffc80a;
+    background: #fa741b;
 }
 
 h3.tittle span,
@@ -886,7 +886,7 @@ ul.list-unstyled.w3ls-icons.clients li {
 }
 
 ul.list-unstyled.w3ls-icons.clients li span {
-    color: #ffc80a;
+    color: #fa741b;
     font-size: 0.8em;
 }
 
@@ -1122,7 +1122,7 @@ hr {
     font-size: 1.2em;
     letter-spacing: 1px;
     font-weight: 600;
-    color: #ffc80a;
+    color: #fa741b;
 }
 
 /* footer grids */
@@ -1198,7 +1198,7 @@ h3.w3pvt_title {
 }
 
 .w3ls-icons li a span:hover {
-    color: #ffc80a;
+    color:#fa741b;
 }
 
 /* //footer */
