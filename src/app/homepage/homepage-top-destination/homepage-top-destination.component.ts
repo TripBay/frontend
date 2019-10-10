@@ -22,32 +22,22 @@ export class HomepageTopDestinationComponent implements OnInit {
     loop:true,
     margin:10,
     nav:true,
-    autoplay:true,
-    autoplayTimeout:2000,
     autoplayHoverPause:true,
     onLazyLoad: true,
+    responsiveClass:true,
     responsive:{
         0:{
-            items:1
+            items:1,
+            nav:true
         },
-        600:{
-            items:2
+        768:{
+            items:2,
+            nav:true
         },
-        1000:{
-            items:4
+        1080:{
+            items:4,
+            nav:true
         }
     } };
-  CarouselOptions = { items: 9, dots: true, nav: true ,
-    responsive:{
-      0:{
-          items:1
-      },
-      600:{
-          items:2
-      },
-      1000:{
-          items:4
-      }
-    }
-    };
+  CarouselOptions = { items: 9, dots: true, nav: true , responsiveClass: true};
 }
