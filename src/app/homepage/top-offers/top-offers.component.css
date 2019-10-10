@@ -12,6 +12,38 @@ img {
 }
 
 .img-last {
+  padding-top: 20px;
   object-fit: fill !important;
-  width: 100% !important;
+  display: block !important;
+  width: 494px !important;
+  height: 250px !important;
+}
+
+.hotel-first-image {
+  height: 400px;
+}
+
+
+@media screen and (max-width: 736px) {
+  img {
+    padding-top: 20px;
+    width: 494px !important;
+    height: 250px !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  img {
+    padding-top: 20px;
+    width: 494px !important;
+    height: 250px !important;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  img {
+    padding-top: 20px;
+    width: 494px !important;
+    height: 250px !important;
+  }
 }

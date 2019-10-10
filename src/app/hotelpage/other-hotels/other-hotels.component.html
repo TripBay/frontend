@@ -1,4 +1,4 @@
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="container">
@@ -83,4 +83,21 @@
       <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>
+  </div> -->
+
+  <div class='container-fluid'>
+      <owl-carousel [options]="SlideOptions" [items]="images" [carouselClasses]="['owl-theme', 'sliding']" >
+        <div class="item" *ngFor="let img of images">
+        <div style="align-content: center">
+        <div class="card">
+            <img src={{img}} class="card-img-top" alt="hotel-img">
+            <div class="card-body">
+              <h5 class="card-title">Monina's Inn</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary"> GO </a>
+            </div>
+          </div>
+        </div>
+        </div>
+        </owl-carousel>
+      </div>
