@@ -1,4 +1,4 @@
-
+/*
 .item img {
   margin-left: auto;
   margin-right: auto;
@@ -33,10 +33,13 @@
 }
 
 .fa-chevron-circle-left, .fa-chevron-circle-right {
-  color: red;
+  color: skyblue;
   font-size: 40px;
 }
-
+.card {
+  width: 16rem;
+}
+ */
 img.card-img-top {
   border-radius: 50%;
   height : 150px !important;
@@ -45,3 +48,5 @@ img.card-img-top {
   margin-left: auto;
   margin-right: auto;
 }
+
+

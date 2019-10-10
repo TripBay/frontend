@@ -38,6 +38,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { LogInComponent } from './user-login/log-in/log-in.component';
 import { SignUpComponent } from './user-login/sign-up/sign-up.component';
 import { GuestAddMinusComponent } from './guest/guest-add-minus/guest-add-minus.component';
+import { OwlModule } from 'ngx-owl-carousel';
 
 // const fbLoginOptions: LoginOpt = {
 //   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
@@ -106,7 +107,8 @@ import { GuestAddMinusComponent } from './guest/guest-add-minus/guest-add-minus.
     HttpClientModule,
     BsDropdownModule.forRoot(),
     // SocialLoginModule
-    NgxDaterangepickerMd.forRoot()
+    NgxDaterangepickerMd.forRoot(),
+    OwlModule
   ],
   entryComponents: [
     DatepickerComponent,
@@ -120,7 +122,4 @@ import { GuestAddMinusComponent } from './guest/guest-add-minus/guest-add-minus.
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-
-
-}
+export class AppModule {}
