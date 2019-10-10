@@ -23,6 +23,15 @@ img {
   height: 400px;
 }
 
+@media screen and (max-width: 1070px) {
+  .img-last {
+    padding-top: 20px;
+    object-fit: fill !important;
+    display: block !important;
+    width: 460px !important;
+    height: 270px !important;
+  }
+}
 
 @media screen and (max-width: 736px) {
   img {
@@ -35,15 +44,23 @@ img {
 @media screen and (max-width: 640px) {
   img {
     padding-top: 20px;
-    width: 494px !important;
-    height: 250px !important;
+    width: 384px !important;
+    height: 170px !important;
+  }
+
+  .img-last {
+    padding-top: 20px;
+    object-fit: fill !important;
+    display: block !important;
+    width: 384px !important;
+    height: 170px !important;
   }
 }
 
 @media screen and (max-width: 384px) {
   img {
     padding-top: 20px;
-    width: 494px !important;
-    height: 250px !important;
+    width: 384px !important;
+    height: 170px !important;
   }
 }
