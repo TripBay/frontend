@@ -27,16 +27,19 @@ export class CustomerReviewsComponent implements OnInit {
     autoplayHoverPause:true,
     lazyLoad: true,
     responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:4
-        }
-    } };
+      0:{
+        items:1,
+        nav:true
+      },
+      768:{
+          items:2,
+          nav:true
+      },
+      1080:{
+          items:4,
+          nav:true
+      }
+    }};
   CarouselOptions = { items: 9, dots: true, nav: true };
 
 }
