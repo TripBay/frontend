@@ -54,7 +54,6 @@ export class LogInComponent implements OnInit {
       }
 
       this.loading = true;
-      // console.log(this.f.email.value, this.f.password.value)
       this.authenticationService.login(this.f.email.value, this.f.password.value)
           .pipe(first())
           .subscribe(
@@ -63,7 +62,6 @@ export class LogInComponent implements OnInit {
               },
               error => {
                   this.alertService.error(error);
-                  // console.log(this.error);
                   this.loading = false;
               });
   }

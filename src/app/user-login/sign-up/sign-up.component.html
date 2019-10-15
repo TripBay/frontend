@@ -10,6 +10,7 @@
     <br>
     <div class="email-login-form">
       <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <alert></alert>
           <div class="form-group">
               <input type="text" formControlName="name" class="form-control form-control-lg" id="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" placeholder="Name">
             </div>

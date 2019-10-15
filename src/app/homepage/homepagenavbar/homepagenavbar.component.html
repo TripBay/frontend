@@ -12,11 +12,10 @@
                     <label for="drop" class="toggle">Menu</label>
                     <input type="checkbox" id="drop" />
                     <ul class="menu mt-2 ml-auto">
-                        <li class="active"><a [routerLink]="['/']">Home</a></li>
-                        <li><a [routerLink]="['/about-us']" class="scroll">About</a></li>
-                        <li><a [routerLink]="['/']">Download App</a></li>
+                        <li *ngIf="!isUserLogin()"><a [routerLink]="['/sign/up']" class="scroll">List Your Property</a></li>
                         <li *ngIf="!isUserLogin()"><a [routerLink]="['/sign/up']" class="scroll">Join</a></li>
                         <li *ngIf="!isUserLogin()"><a [routerLink]="['/sign/in']" class="scroll">Sign In</a></li>
+                        <li><a [routerLink]="['/']">Download App</a></li>
                         <li *ngIf="isUserLogin()"><a (click)="logout()" class="logout" >Log out</a></li>
                     </ul>
                 </nav>
