@@ -7,10 +7,7 @@ export const environment = {
   _apiUrl: 'http://tripbay-backend.herokuapp.com/api',
   get apiUrl() {
     return this._apiUrl;
-  },
-  set apiUrl(value) {
-    this._apiUrl = value;
-  },
+  }
 };
 
 /*
