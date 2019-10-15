@@ -21,6 +21,7 @@ export class OtherHotelsComponent implements OnInit {
   SlideOptions = {
     loop:true,
     margin:10,
+    items: 3,
     nav:true,
     autoplay:true,
     autoplayTimeout:2000,
@@ -29,15 +30,16 @@ export class OtherHotelsComponent implements OnInit {
     responsive:{
       0:{
         items:1,
-        nav:true
+        nav:false,
+        dots: false
       },
       768:{
           items:2,
-          nav:true
+          nav:false,
+          dots: false
       },
       1080:{
-          items:3,
-          nav:true
+          items:3
       }
     }};
   CarouselOptions = { items: 8, dots: true, nav: true };

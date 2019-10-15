@@ -13,6 +13,8 @@ export class LoginComponent implements OnInit {
   user: SocialUser;
   private loggedIn: boolean;
 
+  
+
   constructor(private authService: AuthService) { }
 
   signInWithGoogle(): void {

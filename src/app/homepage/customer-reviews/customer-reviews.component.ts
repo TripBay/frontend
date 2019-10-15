@@ -29,11 +29,13 @@ export class CustomerReviewsComponent implements OnInit {
     responsive:{
       0:{
         items:1,
-        nav:true
+        nav:true,
+        dots: false
       },
       768:{
           items:2,
-          nav:true
+          nav:true,
+          dots: false
       },
       1080:{
           items:4,

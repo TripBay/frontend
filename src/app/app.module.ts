@@ -15,7 +15,7 @@ import { ReactiveFormsModule }  from '@angular/forms';
 import { FormsModule }  from '@angular/forms';
 import { GuestComponent } from './guest/guest.component';
 import { GuestCounterComponent } from './guest/guest-counter/guest-counter.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -39,6 +39,9 @@ import { LogInComponent } from './user-login/log-in/log-in.component';
 import { SignUpComponent } from './user-login/sign-up/sign-up.component';
 import { GuestAddMinusComponent } from './guest/guest-add-minus/guest-add-minus.component';
 import { OwlModule } from 'ngx-owl-carousel';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { AlertComponent } from './_components';
 
 // const fbLoginOptions: LoginOpt = {
 //   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
@@ -95,7 +98,9 @@ import { OwlModule } from 'ngx-owl-carousel';
      UserLoginComponent,
      LogInComponent,
      SignUpComponent,
-     GuestAddMinusComponent
+     GuestAddMinusComponent,
+     UserDashboardComponent,
+     AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -115,6 +120,8 @@ import { OwlModule } from 'ngx-owl-carousel';
     ExampleHeader
   ],
   providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     // {
     //   provide: AuthServiceConfig,
     //   useFactory: provideConfig

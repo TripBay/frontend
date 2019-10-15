@@ -15,8 +15,9 @@
                         <li class="active"><a [routerLink]="['/']">Home</a></li>
                         <li><a [routerLink]="['/about-us']" class="scroll">About</a></li>
                         <li><a [routerLink]="['/']">Download App</a></li>
-                        <li><a [routerLink]="['/sign/up']" class="scroll">Sign Up</a></li>
+                        <li><a [routerLink]="['/sign/up']" class="scroll">Join</a></li>
                         <li><a [routerLink]="['/sign/in']" class="scroll">Sign In</a></li>
+                        <li><a (click)="logout()" class="scroll" *ngIf="isUserLogin()">Log out</a></li>
                     </ul>
                 </nav>
                 <!-- //nav -->

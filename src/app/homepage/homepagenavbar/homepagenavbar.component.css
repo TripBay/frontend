@@ -2,6 +2,10 @@ a {
   text-decoration: none !important;
 }
 
+#gago {
+  cursor: pointer;
+}
+
 a.btn {
   background-color: #007bff;
   width: 150px;

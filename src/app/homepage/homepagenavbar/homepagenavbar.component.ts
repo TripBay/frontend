@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthenticationService } from '@app/_services';
+import { User } from '@app/models';
 
 @Component({
   selector: 'homepagenavbar',
@@ -7,7 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepagenavbarComponent implements OnInit {
 
-  constructor() { }
+  currentUser: User;
+  loading = false;
+  users: User[];
+
+  constructor(
+    private router: Router,
+    private authenticationService: AuthenticationService,
+) {
+    this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+}
 
   ngOnInit() {
   }
@@ -15,4 +27,17 @@ export class HomepagenavbarComponent implements OnInit {
   scroll(el: HTMLElement) {
     el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
+
+  isUserLogin(): boolean {
+    if(this.authenticationService.currentUser !== null) {
+      return false;
+    }else {
+      return true;
+    }
+  }
+
+  logout() {
+    this.authenticationService.logout();
+    this.router.navigate(['/sign/in']);
+}
 }
