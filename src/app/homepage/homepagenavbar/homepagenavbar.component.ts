@@ -29,11 +29,7 @@ export class HomepagenavbarComponent implements OnInit {
   }
 
   isUserLogin(): boolean {
-    if(this.authenticationService.currentUser !== null) {
-      return false;
-    }else {
-      return true;
-    }
+    if(this.currentUser) return true;
   }
 
   logout() {

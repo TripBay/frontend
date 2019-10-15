@@ -2,8 +2,9 @@ a {
   text-decoration: none !important;
 }
 
-#gago {
-  cursor: pointer;
+.logout {
+  cursor: pointer !important;
+  color: white !important;
 }
 
 a.btn {
