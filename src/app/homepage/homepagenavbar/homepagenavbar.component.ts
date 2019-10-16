@@ -9,7 +9,7 @@ import { User } from '@app/models';
   styleUrls: ['./homepagenavbar.component.css']
 })
 export class HomepagenavbarComponent implements OnInit {
-
+  access_token: any;
   currentUser: User;
   loading = false;
   users: User[];
@@ -22,6 +22,7 @@ export class HomepagenavbarComponent implements OnInit {
 }
 
   ngOnInit() {
+    // console.log(this.currentUser);
   }
 
   scroll(el: HTMLElement) {

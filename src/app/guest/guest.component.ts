@@ -10,7 +10,6 @@ import { Component, OnInit } from '@angular/core';
 export class GuestComponent implements OnInit {
 
   guests: Object;
-  data;
 
   constructor(private guestService: UserService) { }
 

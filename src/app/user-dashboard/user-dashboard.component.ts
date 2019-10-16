@@ -18,6 +18,7 @@ export class UserDashboardComponent implements OnInit {
     this.loading = true;
         this.userService.getUsers().pipe(first()).subscribe(users => {
             this.loading = false;
+            console.log(this.users);
             this.users = users;
         });
   }

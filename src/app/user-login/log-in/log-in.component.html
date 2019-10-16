@@ -7,10 +7,9 @@
       <a class="bton google-btn"><i class="fa fa-google"></i> &nbsp; Sign In with Google</a>
     </div><br>
     <p class="or"><span>or</span></p>
-    <br>
+    <alert></alert>
     <div class="email-login-form">
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-          <alert></alert>
           <div class="form-group">
             <input type="text" formControlName="email" class="form-control form-control-lg" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" id="emailInput" placeholder="Enter E-mail Address">
             <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
@@ -31,7 +30,6 @@
             <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
             Login
           </button>
-          <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
           <div class="forgot-pass">
             <a href="/">Forgot password?</a>
           </div>

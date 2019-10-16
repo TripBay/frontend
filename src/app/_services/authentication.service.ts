@@ -1,3 +1,4 @@
+import { catchError } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
@@ -12,7 +13,7 @@ export class AuthenticationService {
     public currentUser: Observable<User>;
 
     httpOptions = {
-      headers: new HttpHeaders({ 'Accept': 'application/json'})
+      headers: new HttpHeaders({ 'Content-Type': 'application/json'})
     };
 
     constructor(private http: HttpClient) {

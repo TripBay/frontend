@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: '' , component: HomepageComponent},
   {path: 'about-us' , component: AboutUsComponent},
   {path: 'hotel-page' , component: HotelpageComponent},
-  {path: 'dashboard' , component: UserDashboardComponent, canActivate: [AuthGuard] },
+  {path: 'dashboard' , component: UserDashboardComponent,   canActivate: [AuthGuard] },
   {path: 'search' , component: SearchResultsComponent},
   {path: 'sign', component: UserLoginComponent,
         children: [

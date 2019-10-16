@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // import { SocialLoginModule, AuthServiceConfig, LoginOpt } from "angularx-social-login";
 // import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
-import { LoginComponent } from './login/login.component';
 import { BookingComponent } from './booking/booking.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BookingSearchComponent } from './booking/booking-search/booking-search.component';
@@ -71,7 +70,6 @@ import { AlertComponent } from './_components';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     BookingComponent,
     BookingSearchComponent,
     DatepickerComponent,
