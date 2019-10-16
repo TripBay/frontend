@@ -14,7 +14,10 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {}
 
   home() {
-    if(this.router.url === '/' || this.router.url === '/#home' || this.router.url === '/#' || this.router.url === '/#about'){
+    if(this.router.url === '/' || this.router.url === '/#home' ||
+    this.router.url === '/#' || this.router.url === '/#about' ||
+    this.router.url === '/?returnUrl=%2Fsign%2Fin' ||
+    this.router.url === '/?returnUrl=%2Fsign%2Fup'){
       return true;
     }
   }
