@@ -8,6 +8,7 @@ import { AuthenticationService } from '@app/_services';
   styleUrls: ['./user-dashboard.component.css']
 })
 export class UserDashboardComponent implements OnInit {
+  loading
   role_id: number;
   role: any;
 

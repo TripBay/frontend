@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
-
+import { MustMatch } from '@app/_helpers';
 import { AlertService, UserService, AuthenticationService } from '@app/_services';
 
 @Component({
@@ -33,9 +33,11 @@ export class SignUpComponent implements OnInit {
     this.registerForm = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(8)]]
-    // repassword: ['', [Validators.required, Validators.minLength(6)]]
-  });
+      password: ['', [Validators.required, Validators.minLength(8)]],
+      repassword: ['', [Validators.required]]
+      }, {
+        validator: MustMatch('password', 'repassword')
+      });
   }
 
   // convenience getter for easy access to form fields
@@ -64,7 +66,7 @@ export class SignUpComponent implements OnInit {
                         this.router.navigate(['/dashboard']);
                       },
                       error => {
-                          this.alertService.success(error);
+                          this.alertService.error(error);
                           this.loading = false;
                       });;
               },

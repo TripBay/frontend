@@ -3,7 +3,6 @@ Users <br>
 <ul *ngIf="guests">
   <li *ngFor="let user of guests ">
      {{ user.attributes.name }} - {{ user.relationships.profile.data.attributes.about }}  - {{ user.relationships.account.data.attributes.location }}<br> <br>
-
   </li>
 </ul>
 
