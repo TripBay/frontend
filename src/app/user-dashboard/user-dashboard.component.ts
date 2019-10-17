@@ -1,7 +1,6 @@
+import { RoleService } from './../_services/role.service';
 import { Component, OnInit } from '@angular/core';
-import { User } from '@app/models';
-import { UserService, AuthenticationService } from '@app/_services';
-import { first } from 'rxjs/internal/operators/first';
+import { AuthenticationService } from '@app/_services';
 
 @Component({
   selector: 'app-user-dashboard',
@@ -9,18 +8,25 @@ import { first } from 'rxjs/internal/operators/first';
   styleUrls: ['./user-dashboard.component.css']
 })
 export class UserDashboardComponent implements OnInit {
-  loading = false;
-  users: User[];
+  role_id: number;
+  role: any;
 
-  constructor(private userService: UserService) { }
+  constructor(
+    private authenticationService: AuthenticationService,
+    private roleService: RoleService
+    ) { }
 
   ngOnInit() {
-    this.loading = true;
-        this.userService.getUsers().pipe(first()).subscribe(users => {
-            this.loading = false;
-            console.log(this.users);
-            this.users = users;
-        });
+    this.role_id = this.authenticationService.currentUserValue.role_id;
+    // console.log(this.role);
+    this.getRole(this.role_id);
+  }
+
+  getRole(id: number) {
+    this.roleService.getRole(id).subscribe(datas => {
+      console.log(datas);
+      this.role = datas;
+    });
   }
 
 }

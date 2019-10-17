@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, Subscriber , of} from 'rxjs';
-import { map, tap, subscribeOn,catchError } from "rxjs/operators";
+import { Observable, of} from 'rxjs';
+import { tap, catchError } from "rxjs/operators";
 
 import { environment } from '@environments/environment';
 import { User } from '@app/models';
@@ -33,11 +33,10 @@ export class UserService {
         return this.http.get<User[]>(`${environment.apiUrl}/users`).pipe(
           tap(_ => console.log('fetched users')),
           catchError(this.handleError<User[]>('getUsers', []))
-          );;
+          );
     }
 
     register(user: User) {
-      // console.log(user);
       return this.http.post(`${environment.apiUrl}/register`, user, this.httpOptions);
   }
 

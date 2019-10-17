@@ -1,6 +1,6 @@
 Users <br>
-
-<ul>
+<div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+<ul *ngIf="guests">
   <li *ngFor="let user of guests ">
      {{ user.attributes.name }} - {{ user.relationships.profile.data.attributes.about }}  - {{ user.relationships.account.data.attributes.location }}<br> <br>
 

@@ -73,10 +73,5 @@ export class SignUpComponent implements OnInit {
                   // console.log(error);
                   this.loading = false;
               });
-  }
-
-  autoLogin() {
-
-
-  }
+      }
 }

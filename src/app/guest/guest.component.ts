@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./guest.component.css']
 })
 export class GuestComponent implements OnInit {
-
+  loading = false;
   guests: Object;
 
   constructor(private guestService: UserService) { }
@@ -18,12 +18,11 @@ export class GuestComponent implements OnInit {
   }
 
   getUsers() {
+    this.loading = true;
     this.guestService.getUsers().subscribe((datas: any) => {
+      this.loading = false;
       this.guests = datas.data;
-      console.log(this.guests)    });
-  }
-
-  getUser(id: number){
-
+      console.log(this.guests)
+    });
   }
 }
