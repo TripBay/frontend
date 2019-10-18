@@ -1,12 +1,19 @@
-<div class="card mt-4">
-  <h4 class="card-header">You're logged in with Angular 8 & JWT!!</h4>
-  <div class="card-body">
-      <h6>Users from secure api end point</h6>
-      
+<div class="container">
+  <div class="card mt-4">
+    <h4 class="card-header">Hello
       <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
-      <ul *ngIf="users">
-          <li *ngFor="let user of users">{{ role }}</li>
-      </ul>
+      {{ roleName }}
+    </h4>
+    <div class="card-body">
+        <h6>Dashboard</h6>
+
+        <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+        <br>
+        <a [routerLink]="['/list']" >List your property!</a>
+        <br>
+        <router-outlet></router-outlet>
+
+    </div>
   </div>
 </div>
-
+<br>

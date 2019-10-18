@@ -1,3 +1,6 @@
+import { HostComponent } from './host/host.component';
+import { RoleName } from './models/role_name';
+import { Roles } from './models/roles';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { SignUpComponent } from './user-login/sign-up/sign-up.component';
 import { LogInComponent } from './user-login/log-in/log-in.component';
@@ -15,7 +18,18 @@ const routes: Routes = [
   {path: '' , component: HomepageComponent},
   {path: 'about-us' , component: AboutUsComponent},
   {path: 'hotel-page' , component: HotelpageComponent},
-  {path: 'dashboard' , component: UserDashboardComponent, canActivate: [AuthGuard] },
+  {
+    path: 'dashboard' ,
+    component: UserDashboardComponent,
+    canActivate: [AuthGuard],
+    data: {roles: [RoleName.host, RoleName.user]}
+   },
+  {
+    path: 'list',
+    component: HostComponent,
+    canActivate: [AuthGuard],
+    data: {roles: [RoleName.host]},
+   },
   {path: 'search' , component: SearchResultsComponent},
   {path: 'sign', component: UserLoginComponent,
         children: [

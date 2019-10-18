@@ -8,9 +8,8 @@ import { AuthenticationService } from '@app/_services';
   styleUrls: ['./user-dashboard.component.css']
 })
 export class UserDashboardComponent implements OnInit {
-  loading
-  role_id: number;
-  role: any;
+  loading = false;
+  roleName: any;
 
   constructor(
     private authenticationService: AuthenticationService,
@@ -18,16 +17,8 @@ export class UserDashboardComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.role_id = this.authenticationService.currentUserValue.role_id;
+    this.roleName = this.authenticationService.currentUserValue.name;
     // console.log(this.role);
-    this.getRole(this.role_id);
-  }
-
-  getRole(id: number) {
-    this.roleService.getRole(id).subscribe(datas => {
-      console.log(datas);
-      this.role = datas;
-    });
   }
 
 }

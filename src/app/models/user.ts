@@ -6,7 +6,8 @@ export class User {
     email: string;
     access_token?: string;
   }
-
+  name: string;
+  role_name: string;
   access_token?: string;
   token_type: string;
   role_id: number;

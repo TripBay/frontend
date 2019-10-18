@@ -34,7 +34,7 @@ export class RoleService {
   getRole(id: number): Observable<Roles> {
     return this.http.get<Roles>(`${environment.apiUrl}/roles/${id}`).pipe(
       tap(_ => console.log('fetched role')),
-      catchError(this.handleError<Roles>('getRole', []))
+      catchError(this.handleError<Roles>('getRole'))
       );
   }
 }

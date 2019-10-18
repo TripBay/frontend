@@ -41,6 +41,7 @@ import { OwlModule } from 'ngx-owl-carousel';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AlertComponent } from './_components';
+import { HostComponent } from './host/host.component';
 
 // const fbLoginOptions: LoginOpt = {
 //   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
@@ -98,7 +99,8 @@ import { AlertComponent } from './_components';
      SignUpComponent,
      GuestAddMinusComponent,
      UserDashboardComponent,
-     AlertComponent
+     AlertComponent,
+     HostComponent
   ],
   imports: [
     BrowserModule,
